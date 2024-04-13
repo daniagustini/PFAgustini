@@ -1,0 +1,51 @@
+header {
+    background: $background-secondary; 
+}
+
+.grilla {
+    display: grid;
+    grid-template-rows: 80px;
+    grid-template-areas: 
+    "logo navbar"
+    ;
+    align-items: center;
+        .header__logo {
+            grid-area: logo;
+        }
+        .header__navar {
+            grid-area: navbar;
+            width: 100%;
+            height: 100%;
+            justify-self: center;
+        }     
+}
+
+@mixin mobile {
+    @media (max-width:900px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width:901px) {
+        @content; 
+    }
+}
+
+@include mobile() {
+    .grilla {
+        grid-template-columns: 70% 30%;
+    }
+    .barranav {
+        display: none;
+    }
+}
+
+@include desktop() {
+    .grilla {
+        grid-template-columns: 30% 70%;    
+    } 
+    .dropbtn {
+        display: none;
+    } 
+}

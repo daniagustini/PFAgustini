@@ -1,0 +1,45 @@
+.botonEnviar {
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(to left, $background-button,$background-button-second,$background-button);
+    color: $color-text-button;
+    font-weight: bold;
+    position: relative;
+    left: 70px;
+    border-radius: 7px;
+}
+
+.labelCV{
+    display: flex;
+    margin: 20px auto;
+    background: linear-gradient(to left, $background-button,$background-button-second,$background-button);
+    color: $color-text-button;
+    width: 150px;
+    height: 40px;
+    border: 5px;
+    border-radius: 10px;
+    justify-content: center;
+    font-weight: bold;   
+    align-items: center;
+    cursor: pointer;
+}
+
+.inputCV {
+    display: none;
+}
+
+.botonOferta{
+    background: #eab412;
+    padding: 12px;
+    border-radius: 10px;
+    margin-right: 3px;
+    cursor: pointer;
+    &:hover {
+        background: #f6ce58;
+    }
+}
+
+#textBotonOferta{
+    color: black;
+    font-weight: normal;
+}

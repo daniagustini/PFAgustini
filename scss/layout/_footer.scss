@@ -1,0 +1,40 @@
+footer{
+    background: $background-secondary; 
+    width: 100%; 
+    font-family:Roboto;
+    padding: 1%;
+    .footer__contenedor{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 5px;
+        margin-left: 5%;
+        .footer__lista{
+            margin-left: 4%;
+            list-style-type:square;
+        }
+        .footer__iconos{
+            margin-right: 10%;
+        }
+    }
+    a{
+        color: $color-text-links;
+        margin-left: 15px;
+        &:visited {
+            color: $color-text-links-hover-visited;
+        }
+    }
+}
+
+@mixin footer {
+    @media (max-width: 900px) {
+        @content; 
+    }
+}
+
+@include footer() {
+    .footer__iconos{
+        width: 100%;
+        text-align: center;
+    }
+}
